@@ -17,6 +17,21 @@ struct node* newNode(int data)
     return node;
 }
 
+
+/* bool isBST(struct node* root){
+    if(root == NULL){
+        return true;
+    }
+    if(isBST(root->left)==false){
+        return false;
+    }
+    if(previous!=NULL && previous->data > root->data){
+        return false;
+    }
+    previous = root;
+    return isBST(root->right);
+} */
+
 bool isBST(struct node* root, struct node* minNode, struct node* maxNode){
     if(root == NULL){
         return true;
